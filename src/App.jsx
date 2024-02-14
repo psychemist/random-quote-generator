@@ -1,11 +1,10 @@
 import './App.css'
+import './components/Quote'
 
 function App() {
   return (
     <wrapper id='quote-box'>
-      <div id='text'></div>
-      <p id="author"></p>
-      <button id="new-quote"></button>
+      <Quote />
     </wrapper>
   )
 }
