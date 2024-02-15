@@ -1,11 +1,11 @@
+import Quote from './Quote'
 import './App.css'
-import './components/Quote'
 
 function App() {
   return (
-    <wrapper id='quote-box'>
+    <div id='quote-box'>
       <Quote />
-    </wrapper>
+    </div>
   )
 }
 
