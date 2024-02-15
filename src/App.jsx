@@ -3,9 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <div id='quote-box'>
-      <Quote />
-    </div>
+    <Quote id='quote-box' />
   )
 }
 
