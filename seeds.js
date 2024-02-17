@@ -5,6 +5,16 @@ const colors = [
     "olive", "magenta", "gold", "silver"
 ]
 
+const categories = [
+    "inspirational", "art", "beauty",
+    "computers", "death", "experience",
+    "failure", "fear", "god", "happiness",
+    "health", "imagination", "intelligence",
+    "knowledge", "leadership", "learning",
+    "life", "love", "men", "money", "success",
+]
+
 export {
-    colors
+    colors,
+    categories
 }
