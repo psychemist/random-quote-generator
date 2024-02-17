@@ -1,12 +1,11 @@
 import Quote from './Quote'
-import { colors } from '../seeds'
+import { categories, colors } from '../seeds'
 import './App.css'
 
 function App() {
   return (
     <div id="quote-box">
-      {/* <Quote id='quote-box' /> */}
-      <Quote colors={colors} />
+      <Quote categories={categories} colors={colors} />
     </div>
   )
 }
