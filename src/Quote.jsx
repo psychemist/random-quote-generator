@@ -68,6 +68,8 @@ export default function Quote({ categories, colors }) {
 
       <div style={textStyles} id='text'>{quote.quote}</div>
       <p style={textStyles} id="author">{quote.author}</p>
+      <a style={bgStyles} id="tweet-quote" title="Tweet this quote!" target="_blank"
+        href={`https://twitter.com/intent/tweet?&text=${quote.quote} - ${quote.author}`}>Tweet</a>
 
       <button style={bgStyles} id="new-quote" onClick={() => {
         changeColor()
