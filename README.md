@@ -21,12 +21,15 @@ This project is a React-based web application that displays inspirational quotes
 
 ### Usage
 
-1. After installing dependencies, start the application by running `npm run dev`.
-2. Once the application is running, you can view it in your web browser on the web adddress and port supplied by Vite. The default URI in development mode is `http://localhost:5173`.
-3. Choose a category from the dropdown menu to display quotes from that category.
-4. Click the "New Quote" button to fetch and display a new quote.
+1. After installing dependencies, create starter files by running `npm run build`.
+2. Enter the `npm run preview` command to start .the application in production mode.
+3. Once the application is running, you can view it in your web browser on the web adddress and port supplied by Vite.
+The default URI in prduction mode is `http://localhost:4173`.
+4. Choose a category from the dropdown menu to display quotes from that category.
+The appliation automatically fetches quotes from the *Inspiration* category by default.
+5. Click the "New Quote" button to fetch and display a new quote.
 The application automatically changes the background color with each new quote.
-5. In addition, you can immediately tweet the quote text by pressing the Twitter logo on the page.
+6. In addition, you can immediately tweet the quote text by pressing the Twitter logo on the page.
 
 #### Application Screenshots
 
