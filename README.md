@@ -27,7 +27,7 @@ This project is a React-based web application that displays inspirational quotes
 The default URI in prduction mode is `http://localhost:4173`.
 4. Choose a category from the dropdown menu to display quotes from that category.  
 The application automatically fetches quotes from the *Inspiration* category by default.
-5. Click the "New Quote" button to fetch and display a new quote.
+5. Click the "New Quote" button to fetch and display a new quote.  
 The application automatically changes the background color with each new quote.
 6. In addition, you can immediately tweet the quote text by pressing the Twitter logo on the page.
 
