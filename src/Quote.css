@@ -69,12 +69,12 @@ button:hover {
 }
 
 #new-quote {
-    margin-left: 100px;
+    margin-left: 50px;
     color: white;
 }
 
 #tweet-box {
-    margin-right: 50px;
+    margin: 0 20px;
 }
 
 #tweet-quote {
