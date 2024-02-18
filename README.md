@@ -32,9 +32,9 @@ The application automatically changes the background color with each new quote.
 
 The following images show the quote generator app in light and dark modes on a broswer.
 
-![Light Mode]('./src/assets/image1_light.png')
+![Light Mode](./src/assets/image1_light.png)
 
-![Dark Mode]('./src/assets/image1_dark.png')
+![Dark Mode](./src/assets/image2_dark.png)
 
 ### Technologies Used
 
