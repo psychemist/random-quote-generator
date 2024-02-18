@@ -1,17 +1,17 @@
 const colors = [
-    "red", "orange", "yellow", "green",
-    "blue", "indigo", "violet", "teal",
-    "turquoise", "pink", "purple", "brown",
+    "red", "orange", "green", "blue",
+    "indigo", "violet", "teal", "turquoise",
+    "pink", "purple", "brown", "darkslategray",
     "olive", "magenta", "gold", "silver"
 ]
 
 const categories = [
-    "inspirational", "art", "beauty",
-    "computers", "death", "experience",
-    "failure", "fear", "god", "happiness",
-    "health", "imagination", "intelligence",
-    "knowledge", "leadership", "learning",
-    "life", "love", "men", "money", "success",
+    "inspirational", "death", "failure",
+    "fear", "god", "happiness", "health",
+    "imagination", "intelligence", "knowledge",
+    "life", "love", "money", "success",
+    // "art", "beauty", "computers", "experience",
+    // "leadership", "learning", "men",
 ]
 
 export {
