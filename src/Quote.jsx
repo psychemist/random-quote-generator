@@ -50,31 +50,40 @@ export default function Quote({ categories, colors }) {
   }
 
   const bgStyles = { 'backgroundColor': color }
-  const textStyles = { 'color': color }
+  const textStyles = { 'color': color, text: "center" }
 
-  if (error) return <div>Error: {error.message}</div>
-  if (!quote) return <div>Loading...</div>
+  if (error) return <div style={textStyles}>Error: {error.message}</div>
+  if (!quote) return <div style={textStyles}>Loading...</div>
 
   return (
     <>
-      <label htmlFor="quote-category">Choose a category: </label>
-      <select name="category" id="quote-category" onChange={changeCategory}>
-        {categories.map((category, idx) => {
-          const cappedCategory =
-            category.charAt(0).toUpperCase() + category.slice(1)
-          return <option value={category}>{cappedCategory}</option>
-        })}
-      </select>
+      <div class="quote-select">
+        <label style={textStyles} htmlFor="quote-category">Choose a category: </label>
+        <select style={textStyles} class="form-select form-select-sm" name="category" id="quote-category" onChange={changeCategory}>
+          {categories.map((category, idx) => {
+            const cappedCategory =
+              category.charAt(0).toUpperCase() + category.slice(1)
+            return <option value={category}>{cappedCategory}</option>
+          })}
+        </select>
+      </div>
 
-      <div style={textStyles} id='text'>{quote.quote}</div>
-      <p style={textStyles} id="author">{quote.author}</p>
-      <a style={bgStyles} id="tweet-quote" title="Tweet this quote!" target="_blank"
-        href={`https://twitter.com/intent/tweet?&text=${quote.quote} - ${quote.author}`}>Tweet</a>
+      <div class="quote-text">
+        <span style={textStyles} id='text'><i class="bi bi-quote"></i>{quote.quote}</span>
+        <p style={textStyles} id="author">{quote.author}</p>
+      </div>
 
-      <button style={bgStyles} id="new-quote" onClick={() => {
-        changeColor()
-        changeQuote(category)
-      }}>New Quote</button>
+      <div class="quote-buttons">
+        <button style={bgStyles} id="tweet-box">
+          <a id="tweet-quote" title="Tweet this quote!" target="_blank"
+            href={`https://twitter.com/intent/tweet?&text=${quote.quote} - ${quote.author}`}>
+            <i class="bi bi-twitter-x"></i></a>
+        </button>
+        <button style={bgStyles} id="new-quote" onClick={() => {
+          changeColor()
+          changeQuote(category)
+        }}>New Quote</button>
+      </div>
     </>
   )
 }
