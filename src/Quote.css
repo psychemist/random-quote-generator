@@ -7,6 +7,7 @@
 #quote-category {
     font-weight: 500;
     text-align: center;
+    background-color: black;
 }
 
 #text {
@@ -56,12 +57,12 @@ button:hover {
 }
 
 #new-quote {
-    color: white;
+    color: black;
 }
 
 #tweet-quote {
     padding: 10px;
-    color: white;
+    color: black;
 }
 
 @media only screen and (max-width: 768px) {
