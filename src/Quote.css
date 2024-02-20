@@ -1,24 +1,12 @@
-.quote-select {
-    position: absolute;
-    bottom: 360px;
-}
-
 .quote-select label {
-    margin-right: 25px;
+    text-align: center;
     font-weight: 500;
+    align-self: center;
 }
 
 #quote-category {
-    width: 150px;
-    display: inline-block;
     font-weight: 500;
-}
-
-.quote-text {
-    position: absolute;
-    top: 125px;
-    width: 75%;
-    margin-top: 20px;
+    text-align: center;
 }
 
 #text {
@@ -34,7 +22,7 @@
 }
 
 #author {
-    margin-top: 20px;
+    margin: 0;
     font-weight: 800;
 }
 
@@ -46,16 +34,15 @@
 }
 
 .quote-buttons {
-    position: absolute;
-    bottom: 35px;
-    max-width: 75%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 button {
     border-radius: 5px;
     border: 1px solid transparent;
-    padding: 0.5em;
+    padding: 0.25em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
@@ -69,16 +56,63 @@ button:hover {
 }
 
 #new-quote {
-    margin-left: 50px;
     color: white;
-}
-
-#tweet-box {
-    margin: 0 20px;
 }
 
 #tweet-quote {
     padding: 10px;
-    text-decoration: inherit;
     color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .quote-select {
+        display: flex;
+        flex-direction: column;
+        /* place-items: center; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #quote-category {
+        width: 60%;
+        margin: 10px 0 0 0;
+        align-self: center;
+    }
+
+    #author {
+        margin: 5px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .quote-select {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #quote-category {
+        width: 40%;
+        margin: 0 0 0 40px;
+        font-size: 1rem;
+    }
+
+    .quote-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #author {
+        margin: 10px 0 0 0;
+    }
+
+    button {
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    button {
+        padding: 7.5px;
+    }
 }
