@@ -50,34 +50,34 @@ export default function Quote({ categories, colors }) {
   }
 
   const bgStyles = { 'backgroundColor': color }
-  const textStyles = { 'color': color, text: "center" }
+  const textStyles = { 'color': color }
 
   if (error) return <div style={textStyles}>Error: {error.message}</div>
   if (!quote) return <div style={textStyles}>Loading...</div>
 
   return (
     <>
-      <div class="quote-select">
+      <div className="quote-select">
         <label style={textStyles} htmlFor="quote-category">Choose a category: </label>
-        <select style={textStyles} class="form-select form-select-sm" name="category" id="quote-category" onChange={changeCategory}>
+        <select style={textStyles} className="form-select form-select-sm" name="category" id="quote-category" onChange={changeCategory}>
           {categories.map((category, idx) => {
             const cappedCategory =
               category.charAt(0).toUpperCase() + category.slice(1)
-            return <option value={category}>{cappedCategory}</option>
+            return <option key={idx} value={category}>{cappedCategory}</option>
           })}
         </select>
       </div>
 
-      <div class="quote-text">
-        <span style={textStyles} id='text'><i class="bi bi-quote"></i>{quote.quote}</span>
+      <div className="quote-text">
+        <span style={textStyles} id='text'><i className="bi bi-quote"></i>{quote.quote}</span>
         <p style={textStyles} id="author">{quote.author}</p>
       </div>
 
-      <div class="quote-buttons">
+      <div className="quote-buttons">
         <button style={bgStyles} id="tweet-box">
           <a id="tweet-quote" title="Tweet this quote!" target="_blank"
             href={`https://twitter.com/intent/tweet?&text=${quote.quote} - ${quote.author}`}>
-            <i class="bi bi-twitter-x"></i></a>
+            <i className="bi bi-twitter-x"></i></a>
         </button>
         <button style={bgStyles} id="new-quote" onClick={() => {
           changeColor()
