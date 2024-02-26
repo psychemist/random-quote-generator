@@ -18,6 +18,8 @@ body {
     flex-direction: column;
     border-radius: 15px;
     background-color: black;
+    height: 100%;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 768px) {
@@ -25,7 +27,6 @@ body {
         width: 85vw;
         height: 75vh;
         padding: 20px;
-        justify-content: space-between;
     }
 }
 
@@ -33,15 +34,14 @@ body {
     #quote-box {
         width: 60vw;
         height: 70vh;
-        padding: 10px;
-        justify-content: space-around;
+        padding: 20px;
     }
 }
 
 @media only screen and (min-width: 992px) {
     #quote-box {
         width: 50vw;
-        height: 60vh;
-        justify-content: space-around;
+        height: 70vh;
+        padding: 20px;
     }
 }
