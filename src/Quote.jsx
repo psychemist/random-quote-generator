@@ -2,14 +2,18 @@ import { useEffect, useState } from 'react'
 import './Quote.css'
 
 const API_KEY = import.meta.env.VITE_API_KEY
+const getColor = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
 export default function Quote({ categories, colors }) {
-  const getColor = (arr) => arr[Math.floor(Math.random() * arr.length)]
-
   const [quote, setQuote] = useState(null)
   const [error, setError] = useState(false)
   const [color, setColor] = useState(getColor(colors))
   const [category, setCategory] = useState('inspirational')
+
+  useEffect(() => {
+    document.body.style.backgroundColor = color
+    getQuote()
+  }, [])
 
   const getQuote = async (category = 'inspirational') => {
     const url = `https://api.api-ninjas.com/v1/quotes?category=${category}`
@@ -29,11 +33,6 @@ export default function Quote({ categories, colors }) {
       setError(e)
     }
   }
-
-  useEffect(() => {
-    document.body.style.backgroundColor = color
-    getQuote()
-  }, [])
 
   const changeQuote = (category = '') => {
     setQuote(getQuote(category))
